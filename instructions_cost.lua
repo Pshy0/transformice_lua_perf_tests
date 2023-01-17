@@ -1,4 +1,4 @@
-local TEST_ITERATIONS = 4
+local TEST_ITERATIONS = 100
 
 
 
