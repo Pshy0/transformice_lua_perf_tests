@@ -32,6 +32,19 @@ This test is about measuring that:
 
 ## Implementation comparizons
 
+**Comparizon of tring manipulations:**
+
+[string_format.md](./string_format.md)
+
+Conclusions:
+ - `tostring(n)` and `format("%d", n)` is about the same speed.
+ - Concatening 2 numbers with `string.format` is faster than with `..` and `tostring` (~50% slower).
+ - Concatening 4 numbers with `string.format` is faster than with `..` and `tostring` (~100% slower).
+ - Concatening 8 small strings with `..` is faster than with `string.format` (~62% slower).
+ - Concatening 4 small strings with `..` is faster than with `string.format` (~70% slower).
+ - Concatening 2 small strings with `..` is faster than with `string.format` (~120% slower).
+
+
 **Comparizon of local access vs global access:**
 
 [globals_vs_locals.md](./globals_vs_locals.md)
@@ -75,19 +88,3 @@ Conclusions:
  - Performances of dummy functions will get worse if you pass them arguments.
  - When functions tends to exist, dummy is better than false test (~10% slower).
  - When functions tends to not exist, false test is better than dummy (~30% slower).
-
-
-**Comparizon of tring manipulations:**
-
-[string_format.md](./string_format.md)
-
-Conclusions:
- - `tostring(n)` and `format("%d", n)` is about the same speed.
- - Concatening 2 numbers with `string.format` is faster than with `..` and `tostring` (~50% slower).
- - Concatening 4 numbers with `string.format` is faster than with `..` and `tostring` (~100% slower).
- - Concatening 8 small strings with `..` is faster than with `string.format` (~62% slower).
- - Concatening 4 small strings with `..` is faster than with `string.format` (~70% slower).
- - Concatening 2 small strings with `..` is faster than with `string.format` (~120% slower).
-
-
-
