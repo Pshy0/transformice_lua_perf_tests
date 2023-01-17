@@ -57,7 +57,7 @@ Conclusions:
  - Writting to a local is faster than writting to a global (which is ~33% slower).
 
 
-**Comparizon of calling an array of functions ith missing entries, either represented by `false` or a dummy function:**
+**Comparizon of calling an array of functions with missing entries, either represented by `false` or a dummy function:**
 
 [dummy_function_vs_false_test.md](./dummy_function_vs_false_test.md)
 
