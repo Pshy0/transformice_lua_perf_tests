@@ -34,7 +34,7 @@ This test is about measuring that:
 
 **Comparizon of procedural programming style vs POO:**
 
-[procedural_vs_poo.md](./performances_over_time.md)
+[procedural_vs_poo.md](./procedural_vs_poo.md)
 
 Conclusions: 
  - Calling a function in procedural style is faster than in standard Lua POO style (which is ~10% slower).
@@ -50,7 +50,7 @@ Conclusions:
 
 **Comparizon of local access vs global access:**
 
-[procedural_vs_poo.md](./performances_over_time.md)
+[globals_vs_locals.md](./globals_vs_locals.md)
 
 Conclusions:
  - Reading from a local is faster than reading from a global (which is ~20% slower).
@@ -59,7 +59,7 @@ Conclusions:
 
 **Comparizon of calling an array of functions ith missing entries, either represented by `false` or a dummy function:**
 
-[dummy_function_vs_false_test.md](./performances_over_time.md)
+[dummy_function_vs_false_test.md](./dummy_function_vs_false_test.md)
 
 Conclusions:
  - Performances of dummy functions will get worse if you pass them arguments.
