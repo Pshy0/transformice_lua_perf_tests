@@ -22,7 +22,15 @@ print("taken: " .. tostring(total_time) .. "ms")
 
 
 
-## 2023-01-17 04:18
+## 2023-01-17 04:18 (version 740)
 > # taken: 836
 > # taken: 822
 > # taken: 816
+
+
+
+
+## 2023-01-17 15:21 (version 740)
+> # taken: 729
+> # taken: 749
+> # taken: 725
