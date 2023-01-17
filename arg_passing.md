@@ -130,3 +130,18 @@ end
 > # taken: 335ms
 > # taken: 342ms
 > # taken: 344ms
+
+
+
+## table of 8 number arguments
+```lua
+local function f(t) end
+local function Test()
+	for i = 1, 100000 do
+		f({1,2,3,4,5,6,7,8})f({1,2,3,4,5,6,7,8})f({1,2,3,4,5,6,7,8})f({1,2,3,4,5,6,7,8})f({1,2,3,4,5,6,7,8})f({1,2,3,4,5,6,7,8})f({1,2,3,4,5,6,7,8})f({1,2,3,4,5,6,7,8})f({1,2,3,4,5,6,7,8})f({1,2,3,4,5,6,7,8})
+	end
+end
+```
+> # taken: 485ms
+> # taken: 492ms
+> # taken: 519ms
