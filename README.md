@@ -6,7 +6,7 @@ The goal of those tests is to provide an idea about what is best or worst for pe
 Tested snippets and results are presented in the markdown files in this repository, with one file per set of tests.
 Those tests are meant to be run durring initialization, which allows for up to 4000ms of runtime, better for accuracy.
 Performances of the Lua vm can change depending on when tests are run (one day they can be double of another).
-For practical reasons, tests from different sets may not have been not run at the same time, so you should not compare values from different tests.
+For practical reasons, tests from different sets may not have been not run at the same time, so you should not compare values from different sets of tests.
 
 Most tests timings are measured with the snippet below.
 `Test` is a local function containing a loop that performs the tests.
