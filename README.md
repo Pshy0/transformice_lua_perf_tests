@@ -30,6 +30,15 @@ This test is about measuring that:
 
 
 
+
+## Instructions Costs
+
+This is speed measurments for different instructions:
+
+[instructions_cost.md](./instructions_cost.md)
+
+
+
 ## Implementation comparizons
 
 **Comparizon of tring manipulations:**
