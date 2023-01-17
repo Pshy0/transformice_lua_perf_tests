@@ -4,6 +4,7 @@ local TEST_ITERATIONS = 100
 
 --- TFM Settings
 tfm.exec.disableAutoNewGame(true)
+math.randomseed(42)
 
 
 
@@ -16,6 +17,8 @@ local dst_l = 1
 dst_g = 1
 local a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 local t = {a = 0, b = 1, c = 2, d = 3, e = 4, f = 5, g = 6, h = 7, i = 8, j = 9}
+local random = math.random
+local s
 
 
 
@@ -55,6 +58,11 @@ local tests = {
 	{name = "tostring(NNNN)", func = function()
 		for i = 1,100 do
 			tostring(1873)tostring(5665)tostring(4123)tostring(8756)tostring(4758)tostring(4444)tostring(5544)tostring(4452)tostring(5525)tostring(4485)
+		end
+	end},
+	{name = "math.random()", func = function()
+		for i = 1,100 do
+			random()random()random()random()random()random()random()random()random()random()
 		end
 	end},
 	{name = "read local", func = function()
@@ -97,9 +105,34 @@ local tests = {
 			t.a = 0 t.b = 1 t.c = 2 t.d = 3 t.e = 4 t.f = 5 t.g = 6 t.h = 7 t.i = 8 t.j = 9
 		end
 	end},
+	{name = "assign #10 string", func = function()
+		for i = 1,100 do
+			s = "HelloWorld" s = "HelloWorld" s = "HelloWorld" s = "HelloWorld" s = "HelloWorld" s = "HelloWorld" s = "HelloWorld" s = "HelloWorld" s = "HelloWorld" s = "HelloWorld"
+		end
+	end},
+	{name = "assign #20 string", func = function()
+		for i = 1,100 do
+			s = "Hello Very Big World" s = "Hello Very Big World" s = "Hello Very Big World" s = "Hello Very Big World" s = "Hello Very Big World" s = "Hello Very Big World" s = "Hello Very Big World" s = "Hello Very Big World" s = "Hello Very Big World" s = "Hello Very Big World"
+		end
+	end},
 	{name = "'ABCD' .. 'EFGH'", func = function()
 		for i = 1,100 do
 			if 'ABCD' .. 'EFGH' and 'ABCD' .. 'EFGH' and 'ABCD' .. 'EFGH' and 'ABCD' .. 'EFGH' and 'ABCD' .. 'EFGH' and 'ABCD' .. 'EFGH' and 'ABCD' .. 'EFGH' and 'ABCD' .. 'EFGH' and 'ABCD' .. 'EFGH' and 'ABCD' .. 'EFGH' then end
+		end
+	end},
+	{name = "for ipairs(#10 array)", func = function()
+		for i = 1,100 do
+			for i,v in ipairs(a) do end
+		end
+	end},
+	{name = "for pairs(#10 array)", func = function()
+		for i = 1,100 do
+			for i,v in pairs(a) do end
+		end
+	end},
+	{name = "for pairs(#10 table)", func = function()
+		for i = 1,100 do
+			for i,v in pairs(t) do end
 		end
 	end},
 }

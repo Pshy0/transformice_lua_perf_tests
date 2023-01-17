@@ -11,20 +11,26 @@ Results are for 1000 instructions (string.format missbehave with small floats).
 
 Read times may be innacurate because variables had to be used inside additional code.
 
-> witness:				1ms ttl -	0.01ms/1000i
-> function call:		62ms ttl -	0.62ms/1000i
-> function call 1 arg:	66ms ttl -	0.66ms/1000i
-> function call 4 args:	106ms ttl -	1.06ms/1000i
-> function call return:	73ms ttl -	0.73ms/1000i
-> tonumber('NNNN'):		78ms ttl -	0.78ms/1000i
+> witness:				0ms ttl -	0.0ms/1000i
+> function call:		70ms ttl -	0.7ms/1000i
+> function call 1 arg:	69ms ttl -	0.69ms/1000i
+> function call 4 args:	105ms ttl -	1.05ms/1000i
+> function call return:	63ms ttl -	0.63ms/1000i
+> tonumber('NNNN'):		74ms ttl -	0.74ms/1000i
 > tostring(NNNN):		100ms ttl -	1.0ms/1000i
-> read local:			19ms ttl -	0.19ms/1000i
-> read global:			99ms ttl -	0.99ms/1000i
-> assign local:			19ms ttl -	0.19ms/1000i
-> assign global:		99ms ttl -	0.99ms/1000i
-> read array entry:		33ms ttl -	0.33ms/1000i
-> read table entry:		35ms ttl -	0.35ms/1000i
-> assign array entry:	34ms ttl -	0.34ms/1000i
-> assign table entry:	28ms ttl -	0.28ms/1000i
-> 'ABCD' .. 'EFGH':		39ms ttl -	0.39ms/1000i
+> math.random():		44ms ttl -	0.44ms/1000i
+> read local:			18ms ttl -	0.18ms/1000i
+> read global:			91ms ttl -	0.91ms/1000i
+> assign local:			11ms ttl -	0.11ms/1000i
+> assign global:		101ms ttl -	1.01ms/1000i
+> read array entry:		31ms ttl -	0.31ms/1000i
+> assign array entry:	28ms ttl -	0.28ms/1000i
+> read table entry:		39ms ttl -	0.39ms/1000i
+> assign table entry:	19ms ttl -	0.19ms/1000i
+> assign #10 string:	22ms ttl -	0.22ms/1000i
+> assign #20 string:	23ms ttl -	0.23ms/1000i
+> 'ABCD' .. 'EFGH':		46ms ttl -	0.46ms/1000i
+> for ipairs(#10 array):42ms ttl -	0.42ms/1000i
+> for pairs(#10 array):	48ms ttl -	0.48ms/1000i
+> for pairs(#10 table):	51ms ttl -	0.51ms/1000i
 

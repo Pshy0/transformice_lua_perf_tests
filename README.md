@@ -97,3 +97,12 @@ Conclusions:
  - Performances of dummy functions will get worse if you pass them arguments.
  - When functions tends to exist, dummy is better than false test (~10% slower).
  - When functions tends to not exist, false test is better than dummy (~30% slower).
+
+
+**Comparizon of iteration using `ipairs` or `pairs`:**
+
+[pairs_vs_ipairs.md](./pairs_vs_ipairs.md)
+
+Conclusions:
+ - For arrays, `ipairs` and `pairs` perform the same.
+ - Iterating with `pairs` over a 100 items array is faster than a 100 items table (~140% slower).
