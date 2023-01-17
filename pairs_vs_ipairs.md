@@ -5,15 +5,15 @@ local a = {}
 for i = 1,100 do
 	a[i] = i
 end
-local function test()
+local function Test()
 	for i = 1,100000 do
 		for i, v in ipairs(a) do end
 	end
 end
 ```
-> taken: ms
-> taken: ms
-> taken: ms
+> taken: 807ms
+> taken: 821ms
+> taken: 808ms
 
 
 
@@ -24,15 +24,15 @@ local a = {}
 for i = 1,100 do
 	a[i] = i
 end
-local function test()
+local function Test()
 	for i = 1,100000 do
 		for i, v in pairs(a) do end
 	end
 end
 ```
-> taken: ms
-> taken: ms
-> taken: ms
+> taken: 809ms
+> taken: 800ms
+> taken: 805ms
 
 
 
@@ -43,12 +43,12 @@ local a = {}
 for i = 1,100 do
 	a[tostring(i)] = i
 end
-local function test()
+local function Test()
 	for i = 1,100000 do
 		for i, v in pairs(a) do end
 	end
 end
 ```
-> taken: ms
-> taken: ms
-> taken: ms
+> taken: 1930ms
+> taken: 1951ms
+> taken: 1961ms
