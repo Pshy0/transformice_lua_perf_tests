@@ -32,12 +32,13 @@ This test is about measuring that:
 
 ## Implementation comparizons
 
-**Comparizon of procedural programming style vs POO:**
+**Comparizon of local access vs global access:**
 
-[procedural_vs_poo.md](./procedural_vs_poo.md)
+[globals_vs_locals.md](./globals_vs_locals.md)
 
-Conclusions: 
- - Calling a function in procedural style is faster than in standard Lua POO style (which is ~10% slower).
+Conclusions:
+ - Reading from a local is faster than reading from a global (which is ~20% slower).
+ - Writting to a local is faster than writting to a global (which is ~33% slower).
 
 
 **Comparizon of accessing a table twice vs assigning the accessed value to a local:**
@@ -48,23 +49,12 @@ Conclusions:
  - It is always better to assign a table's value to a local rather than accessing it more than once (which is ~30% slower).
 
 
-**Comparizon of local access vs global access:**
+**Comparizon of procedural programming style vs POO:**
 
-[globals_vs_locals.md](./globals_vs_locals.md)
+[procedural_vs_poo.md](./procedural_vs_poo.md)
 
-Conclusions:
- - Reading from a local is faster than reading from a global (which is ~20% slower).
- - Writting to a local is faster than writting to a global (which is ~33% slower).
-
-
-**Comparizon of calling an array of functions with missing entries, either represented by `false` or a dummy function:**
-
-[dummy_function_vs_false_test.md](./dummy_function_vs_false_test.md)
-
-Conclusions:
- - Performances of dummy functions will get worse if you pass them arguments.
- - When functions tends to exist, dummy is better than false test (~10% slower).
- - When functions tends to not exist, false test is better than dummy (~30% slower).
+Conclusions: 
+ - Calling a function in procedural style is faster than in standard Lua POO style (which is ~10% slower).
 
 
 **Comparizon of function argument passing and declarations:**
@@ -75,6 +65,16 @@ Conclusions:
  - Passing a small number is slightly faster than passing a small string representing that number (~4% slower).
  - Not declaring an argument that is going to be passed to a functions is faster than declaring it (~5% slower with 4 int args)
  - The cost of passing additional arguments is exponential (~7% with 1 int, ~18% with 2 ints, ~33% with 3 ints, ~64% with 4 ints, ~110% with 8 ints).
+
+
+**Comparizon of calling an array of functions with missing entries, either represented by `false` or a dummy function:**
+
+[dummy_function_vs_false_test.md](./dummy_function_vs_false_test.md)
+
+Conclusions:
+ - Performances of dummy functions will get worse if you pass them arguments.
+ - When functions tends to exist, dummy is better than false test (~10% slower).
+ - When functions tends to not exist, false test is better than dummy (~30% slower).
 
 
 
