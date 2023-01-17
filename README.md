@@ -41,7 +41,7 @@ This is speed measurments for different instructions:
 
 ## Implementation comparizons
 
-**Comparizon of tring manipulations:**
+**Comparizon of string manipulations:**
 
 [string_format.md](./string_format.md)
 
